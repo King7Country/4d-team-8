@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  margin: 0.5em 0.5em;
+  max-width: 555px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  //  overflow: hidden;
+  background-color: #f3f4f5;
+  color: #333333;
+
+  &__info-container {
+    padding: 0.75em 0.75em 0 0.75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+
+    &--top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  &__author {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    &--highlight {
+      color: rgb(0, 172, 252);
+    }
+  }
+
+  &__info-sub {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__track-info {
+    margin-right: 0.5em;
+    font-size: 1rem;
+    // font-weight: 400;
+  }
+
+  &__description {
+    margin-top: 1em;
+    padding: 0.75em;
+    // margin-bottom: .25em;
+    max-width: 90%;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  &__flip-container {
+    background-color: transparent;
+    width: 400px;
+    height: 175px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  &:hover .flip-card__inner {
+    transform: rotateY(180deg);
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  &__front {
+    background-color: #f3f4f5;
+    color: #333333;
+  }
+
+  &__back {
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f3f4f5;
+    color: #333333;
+    transform: rotateY(180deg);
+  }
+
+  &__front,
+  .flip-card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__headings {
+    margin-bottom: 0.25em;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  &__buttons {
+    margin-top: 0.5em;
+    padding: 0.25em 0.5em;
+    font-size: 0.7rem;
+    display: inline-block;
+    // border: 1px solid black;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+  }
+
+  &__arrow {
+    margin-left: 1em;
+  }
+}
+
+.play {
+  margin-top: 45px;
+  // margin-left: 45px;
+  position: absolute;
+  z-index: 1;
+  // top: -10px;
+  left: 50px;
+}

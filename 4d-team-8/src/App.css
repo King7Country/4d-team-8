@@ -1,0 +1,24 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.app__image {
+  width: 100%;
+  max-width: 576px;
+}
+
+.chill {
+  margin: 15em 0 0 10em;
+  top: -46px;
+
+  left: 126px;
+  position: absolute;
+}
+.app__image {
+  margin-bottom: 2.5em;
+}
