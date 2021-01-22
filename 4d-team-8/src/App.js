@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
+import Player from './components/Player/Player';
 
 import image01 from './assets/images/image_01.jpg';
 import image02 from './assets/images/image_02.jpg';
@@ -42,6 +43,7 @@ function App() {
     <div className="app">
       <Header />
       <Sidebar />
+      <Player />
     </div>
   );
 }
